@@ -5,8 +5,9 @@ class Contact extends Component {
     return(
       <div className='page-header' >
      <h1> Contact Us</h1>
+     <hr />
      <img src={'http://files.blog.turbotax.intuit.com/2011/01/medical.jpg'} />
- </div>    
+ </div>
     )
   }
 }

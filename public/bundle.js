@@ -44499,7 +44499,12 @@ var Home = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { className: 'page-header' },
+        null,
+        _react2.default.createElement(
+          'h1',
+          { className: 'page-header' },
+          'Home'
+        ),
         _react2.default.createElement('img', { className: 'main-pic', src: 'https://cdn.pixabay.com/photo/2016/08/24/08/46/heart-1616465__340.jpg' })
       );
     }
@@ -44609,6 +44614,7 @@ var Contact = function (_Component) {
           null,
           ' Contact Us'
         ),
+        _react2.default.createElement('hr', null),
         _react2.default.createElement('img', { src: 'http://files.blog.turbotax.intuit.com/2011/01/medical.jpg' })
       );
     }
