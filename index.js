@@ -18,7 +18,14 @@ app.get('/*', (req, res)=>{
   res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
 })
 
-mongoose.connect('mongodb://localhost/salud')
+if(process.env.NODE_ENV === 'production'){
+    mongoose.connect(process.env.MONGODB_URI)
+}
+else {
+    mongoose.connect('mongodb://localhost/salud')
+
+}
+
 const db = mongoose.connection
 db.on('connect', ()=>{
   console.log('DB running');
@@ -27,3 +34,4 @@ db.on('connect', ()=>{
 app.listen(PORT, ()=>{
   console.log("server running");
 })
+console.log(process.env.NODE_ENV);
