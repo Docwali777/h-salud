@@ -32,6 +32,6 @@
     "start": "node index.js",
     "nodemon": "nodemon index.js --exec babel-node",
     "webpack": "webpack --env=dev",
-    "build": "webpack --env=prod --progress --profile --colors"
+    "build": "webpack --env=build --progress --profile --colors"
   }
 }
