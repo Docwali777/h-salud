@@ -7,7 +7,7 @@ import Client from './client'
 import Home from './components/pages/home'
 import About from './components/pages/about'
 import Contact from './components/pages/contact'
-import Register from './components/pages/register'
+import Register from './components/pages/userForms/register'
 
 render(
 <Router history={browserHistory} >
