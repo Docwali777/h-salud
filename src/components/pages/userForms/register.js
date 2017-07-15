@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import {bindActionCreators }from 'redux'
+import {bindActionCreators } from 'redux'
 
 //actions
 import {userRegistration} from '../../../actions/userAuth'
@@ -19,7 +19,6 @@ constructor(props){
 
 onChange =(e) =>{
   this.setState({[e.target.name]: e.target.value})
-console.log(this.state);
 }
 
 submit =(e) =>{

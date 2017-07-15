@@ -36102,25 +36102,28 @@ exports.default = (0, _redux.combineReducers)({ logUser: _user2.default });
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+      value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 exports.default = logUser;
-
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
 function logUser() {
-    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : { user: [] };
-    var action = arguments[1];
+      var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : { user: {} };
+      var action = arguments[1];
 
-    switch (action.type) {
-        case 'REGISTER_USER':
-            var newUser = [].concat(_toConsumableArray(state.user), _toConsumableArray(action.payload));
-            console.log(state.user);
-            console.log(newUser);
-            return newUser;
-            break;
-    }
-    return state;
+      switch (action.type) {
+            case 'REGISTER_USER':
+                  var newUser = _extends({}, state);
+                  // console.log(state.user);
+
+                  newUser.user = action.payload;
+                  console.log('state', state.user);
+                  console.log('new', newUser.user);
+                  return newUser;
+                  break;
+      }
+      return state;
 }
 
 /***/ }),
@@ -47540,7 +47543,6 @@ var Register = function (_Component) {
 
     _this.onChange = function (e) {
       _this.setState(_defineProperty({}, e.target.name, e.target.value));
-      console.log(_this.state);
     };
 
     _this.submit = function (e) {
