@@ -54,7 +54,7 @@ submit =(e) =>{
   <input
       className='form-control'
       name='Email'
-      type='password'
+      type='text'
       value={this.state.Email}
       placeholder='Enter Email'
       onChange={this.onChange}
@@ -68,7 +68,7 @@ submit =(e) =>{
   <input
       className='form-control'
       name='Password'
-      type='password'
+      type='text'
       value={this.state.Password}
       placeholder='Enter Password'
       onChange={this.onChange}
