@@ -1,4 +1,9 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import {bindActionCreators }from 'redux'
+
+//actions
+import {userRegistration} from '../../../actions/userAuth'
 
 class Register extends Component{
 constructor(props){
@@ -19,7 +24,7 @@ console.log(this.state);
 
 submit =(e) =>{
   e.preventDefault()
-  console.log(this.state);
+  this.props.userRegistration(this.state)
 }
 
   render(){
@@ -90,4 +95,9 @@ submit =(e) =>{
     )
   }
 }
-export default Register
+function mapDispatchToProps(dispatch){
+  return bindActionCreators({
+    userRegistration
+  }, dispatch)
+}
+export default connect(null, mapDispatchToProps)(Register)

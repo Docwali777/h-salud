@@ -14,6 +14,8 @@
     "webpack": "^3.2.0"
   },
   "dependencies": {
+    "axios": "^0.16.2",
+    "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "mongoose": "^4.11.3",
     "react": "^15.6.1",
@@ -22,13 +24,14 @@
     "react-redux": "^5.0.5",
     "react-router": "3.0.2",
     "react-router-bootstrap": "^0.24.2",
-    "redux": "^3.7.2",
+    "redux": "3.6.0",
+    "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0"
   },
   "scripts": {
-    "start": "./node_modules/.bin/babel-node  index.js",
-    "nodemon": "nodemon index.js",
+    "start": "node index.js",
+    "nodemon": "nodemon index.js --exec babel-node",
     "webpack": "webpack --env=dev",
-    "build": "webpack --env=dev --progress --profile --colors"
+    "build": "webpack --env=prod --progress --profile --colors"
   }
 }

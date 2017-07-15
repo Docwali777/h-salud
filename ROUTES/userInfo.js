@@ -1,6 +1,15 @@
-import express from 'express'
-const router = express.Router()
+const express = require('express');
+const route = express.Router()
 
 
+route.get('/', (req, res)=>{
 
-export default router
+  res.json('get user')
+})
+
+route.post('/', (req, res)=>{
+  const user = req.body
+  res.send(user)
+})
+
+module.exports = route
